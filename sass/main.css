@@ -19,9 +19,20 @@ a {
   color: white;
 }
 
+a:hover {
+  color: white;
+  background-color: #ff8f70;
+  border: solid 1px #ff8f70;
+}
+
 #start {
   background-color: white;
   color: #ff525d;
+}
+
+#start:hover {
+  color: white;
+  background-color: #ff8f70;
 }
 
 .logo {
@@ -31,12 +42,34 @@ a {
   font-size: 2em;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .container1 {
+  overflow: hidden;
   height: 100vh;
   width: 99vw;
   background-image: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
   background-image: linear-gradient(to right, #ff8f70, #ff3d54);
   border-radius: 0 0 0 70px;
+}
+
+.container1 .pattern {
+  position: relative;
+  z-index: 0;
+}
+
+.container1 .pattern img {
+  z-index: 0 !important;
+  width: 210%;
+  position: absolute;
+  z-index: 0;
+  top: -150vh;
+  left: -30vw;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  overflow: hidden;
 }
 
 .container1 header {
@@ -56,11 +89,12 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  z-index: 1000 !important;
 }
 
 .container1 header .nav-sec1 .p-dd-content {
-  padding: 15px 30px;
-  margin: 0 20px;
+  padding: 15px 20px;
+  margin: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,17 +115,20 @@ a {
   cursor: pointer;
 }
 
+.container1 header .nav-sec1 .p-dd-content button:hover .links {
+  display: block !important;
+}
+
 .container1 header .nav-sec1 .p-dd-content .links {
-  display: none;
   background-color: white;
   margin-top: 15px;
-  padding: 25px;
+  padding: 15px;
   border-radius: 10px;
   font-family: 'Ubuntu';
   font-weight: 500;
 }
 
-.container1 header .nav-sec1 .p-dd-content a {
+.container1 header .nav-sec1 .p-dd-content .links a {
   padding: 5px;
   background-color: white;
   text-decoration: none;
@@ -106,8 +143,12 @@ a {
   font-family: 'Ubuntu';
 }
 
-.container1 header .nav-sec1 .p-dd-content a:hover {
+.container1 header .nav-sec1 .p-dd-content .links a:hover {
   font-weight: bold;
+}
+
+.container1 header .nav-sec2 {
+  z-index: 1000 !important;
 }
 
 .container1 header .nav-sec2 a {
@@ -121,7 +162,13 @@ a {
   color: #ff525d;
 }
 
+.container1 header .nav-sec2 #start:hover {
+  color: white;
+  background-color: #ff525d;
+}
+
 .container1 main {
+  position: relative;
   text-align: center;
   margin-top: 15vh;
   color: white;
@@ -133,5 +180,234 @@ a {
 
 .container1 main .main-butns {
   margin-top: 50px;
+}
+
+.container1 main .main-butns a {
+  z-index: 1000 !important;
+}
+
+.container1 main .main-butns a:hover {
+  color: #ff525d;
+  background-color: white;
+}
+
+.container1 main .main-butns #start:hover {
+  color: white;
+  background-color: #ff8f70;
+  border: solid 1px #ff8f70;
+}
+
+.container2 {
+  overflow: hidden;
+  height: 105vh;
+  width: 99vw;
+  margin-bottom: 150px;
+}
+
+.container2 h3 {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 2.5em;
+  color: #1f3f5b;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+}
+
+.container2 h4 {
+  font-size: 1.5rem;
+  color: #1f3f5b;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.container2 img {
+  width: 53vw;
+  position: relative;
+  top: -20vh;
+  left: 20vw;
+  overflow: visible;
+}
+
+.container2 section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 60px;
+  padding-left: 100px;
+}
+
+.container2 section .sec1 {
+  padding: 20px;
+  width: 80vw;
+}
+
+.container3 {
+  margin-top: 150px;
+  position: relative;
+  height: 70vh;
+  width: 99vw;
+  background-image: -webkit-gradient(linear, left top, right top, from(#2c2d3f), to(#3f4164));
+  background-image: linear-gradient(to right, #2c2d3f, #3f4164);
+  border-radius: 0 70px 0 70px;
+}
+
+.container3 .pattern2 {
+  overflow: hidden;
+  position: absolute;
+  z-index: 0 !important;
+}
+
+.container3 .pattern2 img {
+  width: 85%;
+  overflow: hidden;
+  position: relative;
+  top: -75vh;
+  left: -18vw;
+}
+
+.container3 section {
+  z-index: 100000 !important;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container3 section .sec1 img {
+  width: 180%;
+  position: relative;
+  top: -10vh;
+}
+
+.container3 section .sec2 {
+  position: relative;
+  left: 30vw;
+  top: 30vh;
+  width: auto;
+}
+
+.container3 section .sec2 .idk {
+  width: 50%;
+}
+
+.container3 section .sec2 h4 {
+  font-size: 1.5rem;
+  color: white;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.container3 section .sec2 p {
+  color: white;
+}
+
+.container4 {
+  width: 99vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 150px;
+}
+
+.container4 .sec1 {
+  position: relative;
+  left: -18vw;
+}
+
+.container4 .sec1 img {
+  width: 220%;
+}
+
+.container4 .sec2 {
+  padding: 30px;
+  position: relative;
+  top: 20vh;
+  left: 25vw;
+}
+
+.container4 .sec2 .idk2 {
+  width: 70%;
+}
+
+.container4 .sec2 h4 {
+  font-size: 1.5rem;
+  color: #1f3f5b;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+footer {
+  margin-top: 150px;
+  background-color: #25252d;
+  position: relative;
+  bottom: 0;
+  border-radius: 0 70px 0 0;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 30vh;
+  padding: 70px 120px;
+  font-family: 'Ubuntu';
+}
+
+footer h6 {
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  font-weight: 500;
+  margin: 10px 0;
+  color: #c8c8cb;
+  cursor: pointer;
+}
+
+footer ul li:hover {
+  text-decoration: underline;
+}
+
+.attribution {
+  background-color: #25252d;
+  position: relative;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #c8c8cb;
+  padding: 20px;
+}
+
+.attribution a {
+  border: none;
+  padding: 0;
+}
+
+.attribution a:hover {
+  background-color: #25252d;
+  color: #c8c8cb;
 }
 /*# sourceMappingURL=main.css.map */

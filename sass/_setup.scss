@@ -43,10 +43,23 @@ a
     background-color: transparent;
     border: solid 1px $white;
     color: $white;
+
+    &:hover
+    {
+        color: $white;
+        background-color: $VeryLightRed;
+        border: solid 1px $VeryLightRed;
+    }
 }
 
 #start
 {
     background-color: $white;
     color: $lightRed;
+
+    &:hover
+    {
+        color: $white;
+        background-color: $VeryLightRed;
+    }
 }
