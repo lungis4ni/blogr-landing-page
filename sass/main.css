@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+a {
+  padding: 13px;
+  border-radius: 25px;
+  margin: 0 10px;
+  text-decoration: none;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  background-color: transparent;
+  border: solid 1px white;
+  color: white;
+}
+
+#start {
+  background-color: white;
+  color: #ff525d;
+}
+
+.logo {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  color: white;
+  font-size: 2em;
+}
+
+.container1 {
+  height: 100vh;
+  width: 99vw;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+  background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+  border-radius: 0 0 0 70px;
+}
+
+.container1 header {
+  padding: 50px 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container1 header .nav-sec1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container1 header .nav-sec1 .p-dd-content {
+  padding: 15px 30px;
+  margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container1 header .nav-sec1 .p-dd-content button {
+  color: white;
+  border: none;
+  background-color: transparent;
+}
+
+.container1 header .nav-sec1 .p-dd-content button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.container1 header .nav-sec1 .p-dd-content .links {
+  display: none;
+  background-color: white;
+  margin-top: 15px;
+  padding: 25px;
+  border-radius: 10px;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+}
+
+.container1 header .nav-sec1 .p-dd-content a {
+  padding: 5px;
+  background-color: white;
+  text-decoration: none;
+  color: #0e0e0e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Ubuntu';
+}
+
+.container1 header .nav-sec1 .p-dd-content a:hover {
+  font-weight: bold;
+}
+
+.container1 header .nav-sec2 a {
+  text-decoration: none;
+  color: white;
+  border: none;
+}
+
+.container1 header .nav-sec2 #start {
+  background-color: white;
+  color: #ff525d;
+}
+
+.container1 main {
+  text-align: center;
+  margin-top: 15vh;
+  color: white;
+}
+
+.container1 main h1 {
+  font-size: 4em;
+}
+
+.container1 main .main-butns {
+  margin-top: 50px;
+}
+/*# sourceMappingURL=main.css.map */

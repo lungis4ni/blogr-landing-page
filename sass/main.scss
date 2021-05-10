@@ -1,0 +1,120 @@
+@import 'setup';
+
+.logo
+{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    color: $white;
+    font-size: 2em;
+}
+
+.container1
+{
+    height: 100vh;
+    width: 99vw;
+
+    background-image: linear-gradient(to right, $VeryLightRed, $LightRed);
+    border-radius:0 0 0 70px;
+
+    header
+    {
+        padding: 50px 60px;
+        //padding: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        .nav-sec1
+        {
+            display: flex;
+            justify-content: space-between; 
+
+            .p-dd-content
+            {
+                padding: 15px 30px;
+                margin: 0 20px;
+                display: flex;
+                flex-direction: column;
+               
+
+                button
+                {
+                    color: $white;
+                    border: none;
+                    background-color: transparent;
+
+                    &:hover 
+                    {
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+
+                .links
+                {
+                    display: none;
+                    background-color: white;
+                    margin-top: 15px;
+                    padding: 25px;
+                    border-radius: 10px;
+
+                    font-family: 'Ubuntu';
+                    font-weight: 500;
+                }
+
+                a
+                {
+                    padding: 5px;
+                    background-color: $white;
+                    text-decoration: none;
+                    color: rgb(14, 14, 14);
+                    display: flex;
+                    flex-direction: column;
+                    font-family: 'Ubuntu';
+                    //font-weight: 400;
+
+
+                    &:hover
+                    {
+                        //font-weight: 500;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .nav-sec2
+        {
+            a
+            {
+                text-decoration: none;
+                color: $white;
+                border: none;
+            }
+
+            #start
+            {
+                background-color: $white;
+                color: $lightRed;
+            }
+        }
+    }
+
+    main 
+    {
+        text-align: center;
+        margin-top: 15vh;
+        color: $white;
+
+        h1 
+        {
+            font-size: 4em;
+           
+        }
+
+        .main-butns
+        {
+            margin-top: 50px;
+        }
+        
+    }
+}

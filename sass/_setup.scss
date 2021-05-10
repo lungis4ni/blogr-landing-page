@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    //font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+
+    scroll-behavior: smooth;
+}
+
+// Primary Colors
+$lightRed: hsl(356, 100%, 66%); //CTA TEXT
+$VeryLightRed: hsl(355, 100%, 74%); //CTA HOVER BACKGROUND
+$VeryDarkBlue: hsl(208, 49%, 24%); //HEADING
+
+// Neutral Colors
+$white: hsl(0, 0%, 100%); //text
+$GrayishBlue: hsl(240, 2%, 79%); //footer text
+$VeryDarkGrayishBlue: hsl(207, 13%, 34%); //body copy
+$VeryDarkBlackBlue: hsl(240, 10%, 16%); //footer background
+
+//Background gradient - Intro/CTA mobile nav:
+
+$VeryLightRed: hsl(13, 100%, 72%);
+$LightRed: hsl(353, 100%, 62%);
+
+//Background gradient - body:
+
+$VeryDarkGrayBlue: hsl(237, 17%, 21%);
+$VeryDarkDesaturatedBlue: hsl(237, 23%, 32%);
+
+a 
+{
+    padding: 13px;
+    border-radius: 25px;
+    margin: 0 10px;
+
+    text-decoration: none;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+
+    background-color: transparent;
+    border: solid 1px $white;
+    color: $white;
+}
+
+#start
+{
+    background-color: $white;
+    color: $lightRed;
+}
