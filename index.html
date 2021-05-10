@@ -3,57 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!-- Fonts-->
+    <!-- Overpass-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet">
+  
+    <!-- Ubuntu-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | [Blogr]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="sass/main.css">
 </head>
 <body>
-  Product
+	<div class="container1">
+		<header>
+			<div class="nav-sec1">
+				<div class="logo">
+					Blogr
+				</div>
 
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
+				<button class="drop-button">Product </button>
+					<div class="p-dd-content">
+						<a href="#">Overview</a>
+						<a href="#">Pricing</a>
+						<a href="#">Marketplace</a>
+						<a href="#">Features</a>
+						<a href="#">Integrations</a>
+					</div>
+		
+				<button class="drop-button">Company </button>
+					<div class="c-dd-content">
+						<a href="#">About</a>
+						<a href="#">Team</a>
+						<a href="#">Blog</a>
+						<a href="#">Careers</a>
+					</div>
 
-  Company
+				<button class="drop-button">Connect </button>
+					<div class="co-dd-content">
+						<a href="#">Contact</a>
+						<a href="#">Newsletter</a>
+						<a href="#">LinkedIn</a>
+					</div>
+			</div>
 
-  About
-  Team
-  Blog
-  Careers
+			<div class="nav-sec2">
+				<a href="#">Login </a>
+				<a href="#" id="start"> Sign Up </a>
+			</div>
+		</header>
 
-  Connect
+		<main>
+			<h1>A modern publishing platform</h1>
+			<h5>Grow your audience and build your online brand</h5>
 
-  Contact
-  Newsletter
-  LinkedIn
+			<div class="main-butns">
+				<a href="#" id="start">Start for Free</a>
+				<a href="#" id="learn">Learn More</a>
+			</div>
+		</main>
+	</div>
+
+	<div class="container2">
+		<h3>Designed for the future</h3>
+
+		<section>
+			<div class="sec1">
+				<h4>Introducing an extensible editor</h4>
+				<p>
+					Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+					The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+					videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+					change the looks of a blog.
+				</p>
+
+				<br>
+
+				<h4>Robust content management</h4>
+				<p> 
+					Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+					by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+				</p>
+			</div>
+
+			<div class="sec2">
+				<img src="images/illustration-editor-desktop.svg" alt="">
+			</div>
+		</section>
+
+	</div>
   
-  Login
-  Sign Up
-
-  A modern publishing platform
-  Grow your audience and build your online brand
-
-  Start for Free
-  Learn More
-
-  Designed for the future
-
-  Introducing an extensible editor
-  Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
-  The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
-  videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
-  change the looks of a blog.
-
-  Robust content management
   Flexible content management enables users to easily move through posts. Increase the usability of your blog 
   by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
 
