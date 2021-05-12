@@ -42,14 +42,223 @@ a:hover {
   font-size: 2em;
 }
 
-body {
+.everything {
+  display: -ms-grid;
+  display: grid;
+  max-width: 100vw;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   overflow-x: hidden;
+  -ms-grid-rows: 1fr 0.1fr 0.9fr 0.8fr 1fr 0.6fr 0.1fr;
+      grid-template-rows: 1fr 0.1fr 0.9fr 0.8fr 1fr 0.6fr 0.1fr;
+      grid-template-areas: "cont1 cont1" "heading heading" "cont2 cont3" "cont4 cont4" "cont7 cont8" "footer footer" "attr attr";
+}
+
+.everything .container1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: cont1;
+  background-color: blue;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.everything .heading {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: heading;
+  max-width: 100vw;
+  overflow: hidden;
+  max-height: 10vh;
+  padding: 100px 0;
+}
+
+.everything .heading h1 {
+  text-align: center;
+  color: #1f3f5b;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.everything .container2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: cont2;
+  max-width: 50vw;
+  overflow: hidden;
+  max-height: 90vh;
+  padding: 100px;
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.everything .container2 h2 {
+  text-align: left;
+  color: #1f3f5b;
+  padding: 10px 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 1.0em;
+}
+
+.everything .container2 p {
+  text-align: left;
+  color: #1f3f5b;
+}
+
+.everything .container3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: cont3;
+  max-width: 50vw;
+  overflow: hidden;
+  max-height: 90vh;
+  overflow: visible;
+}
+
+.everything .container3 img {
+  position: relative;
+  top: -15vh;
+  left: 5vw;
+  max-width: 130%;
+}
+
+.everything .container4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: cont4;
+  background-image: -webkit-gradient(linear, left top, right top, from(#2c2d3f), to(#3f4164));
+  background-image: linear-gradient(to right, #2c2d3f, #3f4164);
+  max-width: 100vw;
+  max-height: 80vh;
+  margin: 20vh 0;
+  border-radius: 0 70px 0 70px;
+}
+
+.everything .container4 section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  max-height: 60vh;
+  background-image: url(../images/bg-pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: -15% 60%;
+}
+
+.everything .container4 section .container5 {
+  max-height: 80vh;
+  overflow: visible;
+}
+
+.everything .container4 section .container5 img {
+  position: relative;
+  top: -10vh;
+  overflow: visible;
+  z-index: 1000000 !important;
+}
+
+.everything .container4 section .container6 {
+  height: 80vh;
+  padding: 100px;
+  padding-top: 120px;
+  display: inline-block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.everything .container4 section .container6 h2 {
+  text-align: left;
+  color: white;
+  padding: 10px 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 1.0em;
+}
+
+.everything .container4 section .container6 p {
+  text-align: left;
+  color: white;
+}
+
+.everything .container7 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: cont7;
+  overflow: visible;
+  max-width: 50vw;
+  max-height: 100vh;
+  position: relative;
+  left: -20vw;
+}
+
+.everything .container8 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: cont8;
+  overflow: hidden;
+  max-width: 50vw;
+  max-height: 100vh;
+  padding: 0 50px;
+  padding-top: 250px;
+}
+
+.everything .container8 h2 {
+  text-align: left;
+  color: #1f3f5b;
+  padding: 10px 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 1.0em;
+}
+
+.everything .container8 p {
+  text-align: left;
+  color: #1f3f5b;
+}
+
+.everything footer {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+  overflow: hidden;
+  max-width: 100vw;
+  max-height: 60vh;
+  margin-top: 100px;
+}
+
+.everything .attribution {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: attr;
+  overflow: hidden;
+  max-width: 100vw;
+  max-height: 10vh;
+  padding: 20px;
 }
 
 .container1 {
   overflow: hidden;
-  height: 100vh;
-  width: 99vw;
+  max-width: 100vw;
   background-image: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
   background-image: linear-gradient(to right, #ff8f70, #ff3d54);
   border-radius: 0 0 0 70px;
@@ -116,19 +325,20 @@ body {
 }
 
 .container1 header .nav-sec1 .p-dd-content button:hover .links {
-  display: block !important;
+  opacity: 100% !important;
 }
 
 .container1 header .nav-sec1 .p-dd-content .links {
+  opacity: 0;
   background-color: white;
-  margin-top: 15px;
+  margin-top: 20px;
   padding: 15px;
   border-radius: 10px;
   font-family: 'Ubuntu';
   font-weight: 500;
 }
 
-.container1 header .nav-sec1 .p-dd-content .links a {
+.container1 header .nav-sec1 .p-dd-content .links li {
   padding: 5px;
   background-color: white;
   text-decoration: none;
@@ -143,8 +353,8 @@ body {
   font-family: 'Ubuntu';
 }
 
-.container1 header .nav-sec1 .p-dd-content .links a:hover {
-  font-weight: bold;
+.container1 header .nav-sec1 .p-dd-content .links li:hover {
+  color: black;
 }
 
 .container1 header .nav-sec2 {
@@ -170,7 +380,7 @@ body {
 .container1 main {
   position: relative;
   text-align: center;
-  margin-top: 15vh;
+  margin-top: 0vh;
   color: white;
 }
 
@@ -197,160 +407,7 @@ body {
   border: solid 1px #ff8f70;
 }
 
-.container2 {
-  overflow: hidden;
-  height: 105vh;
-  width: 99vw;
-  margin-bottom: 150px;
-}
-
-.container2 h3 {
-  text-align: center;
-  margin-top: 60px;
-  font-size: 2.5em;
-  color: #1f3f5b;
-  font-family: 'Ubuntu';
-  font-weight: 500;
-}
-
-.container2 h4 {
-  font-size: 1.5rem;
-  color: #1f3f5b;
-  font-family: 'Ubuntu';
-  font-weight: 500;
-  margin-bottom: 30px;
-}
-
-.container2 img {
-  width: 53vw;
-  position: relative;
-  top: -20vh;
-  left: 20vw;
-  overflow: visible;
-}
-
-.container2 section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 60px;
-  padding-left: 100px;
-}
-
-.container2 section .sec1 {
-  padding: 20px;
-  width: 80vw;
-}
-
-.container3 {
-  margin-top: 150px;
-  position: relative;
-  height: 70vh;
-  width: 99vw;
-  background-image: -webkit-gradient(linear, left top, right top, from(#2c2d3f), to(#3f4164));
-  background-image: linear-gradient(to right, #2c2d3f, #3f4164);
-  border-radius: 0 70px 0 70px;
-}
-
-.container3 .pattern2 {
-  overflow: hidden;
-  position: absolute;
-  z-index: 0 !important;
-}
-
-.container3 .pattern2 img {
-  width: 85%;
-  overflow: hidden;
-  position: relative;
-  top: -75vh;
-  left: -18vw;
-}
-
-.container3 section {
-  z-index: 100000 !important;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.container3 section .sec1 img {
-  width: 180%;
-  position: relative;
-  top: -10vh;
-}
-
-.container3 section .sec2 {
-  position: relative;
-  left: 30vw;
-  top: 30vh;
-  width: auto;
-}
-
-.container3 section .sec2 .idk {
-  width: 50%;
-}
-
-.container3 section .sec2 h4 {
-  font-size: 1.5rem;
-  color: white;
-  font-family: 'Ubuntu';
-  font-weight: 500;
-  margin-bottom: 30px;
-}
-
-.container3 section .sec2 p {
-  color: white;
-}
-
-.container4 {
-  width: 99vw;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 150px;
-}
-
-.container4 .sec1 {
-  position: relative;
-  left: -18vw;
-}
-
-.container4 .sec1 img {
-  width: 220%;
-}
-
-.container4 .sec2 {
-  padding: 30px;
-  position: relative;
-  top: 20vh;
-  left: 25vw;
-}
-
-.container4 .sec2 .idk2 {
-  width: 70%;
-}
-
-.container4 .sec2 h4 {
-  font-size: 1.5rem;
-  color: #1f3f5b;
-  font-family: 'Ubuntu';
-  font-weight: 500;
-  margin-bottom: 30px;
-}
-
 footer {
-  margin-top: 150px;
   background-color: #25252d;
   position: relative;
   bottom: 0;
@@ -362,7 +419,6 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 30vh;
   padding: 70px 120px;
   font-family: 'Ubuntu';
 }
@@ -398,16 +454,14 @@ footer ul li:hover {
       -ms-flex-pack: center;
           justify-content: center;
   color: #c8c8cb;
-  padding: 20px;
 }
 
 .attribution a {
   border: none;
-  padding: 0;
 }
 
 .attribution a:hover {
   background-color: #25252d;
-  color: #c8c8cb;
+  color: #ff3300;
 }
 /*# sourceMappingURL=main.css.map */
