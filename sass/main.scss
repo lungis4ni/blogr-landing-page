@@ -923,3 +923,8 @@ footer
         }
     }
 }
+
+.productUL, .companyUL, .connectUL
+{
+    display: none !important;
+}
