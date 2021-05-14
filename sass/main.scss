@@ -9,6 +9,10 @@
     font-size: 2em;
 }
 
+.menu, .nav-mobile
+{
+    display: none;
+}
 .everything
 {
     display: grid;
@@ -29,7 +33,6 @@
     .container1
     { 
         grid-area: cont1;
-        background-color: blue;
         max-width: 100vw;
         max-height: 100vh;
         overflow: hidden;
@@ -93,13 +96,10 @@
         max-height: 90vh;
         overflow: visible;
 
-        img 
-        {
-            position: relative;
-            top: -15vh;
-            left: 5vw;
-            max-width: 130%;
-        }
+        background-image: url(../images/illustration-editor-desktop.svg);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
     }
 
     .container4
@@ -175,8 +175,10 @@
         max-width: 50vw;
         max-height: 100vh;
 
-        position: relative;
-        left: -20vw;
+        background-image: url(../images/illustration-laptop-mobile.svg);
+        background-position: center;
+        background-size: 140%;
+        background-repeat: no-repeat;
     }
 
     .container8
@@ -459,18 +461,195 @@ footer
         max-width: 100vw;
         grid-template-columns: 1fr;
         overflow-x: hidden;
-        grid-template-rows: 1fr 0.1fr 0.9fr 0.9fr 1.6fr 1fr 1fr 0.6fr 0.1fr;
+        grid-template-rows: 1fr 0.1fr 0.5fr 0.6fr 1.1fr 0.5fr 0.8fr 1fr 0.1fr;
     //grid-gap: 1vw;
-    grid-template-areas: 
-        "cont1"
-        "heading"
-        "cont3"
-        "cont2"
-        "cont4"
-        "cont7"
-        "cont8"
-        "footer"
-        "attr";
+        grid-template-areas: 
+            "cont1"
+            "heading"
+            "cont3"
+            "cont2"
+            "cont4"
+            "cont7"
+            "cont8"
+            "footer"
+            "attr";
+
+            .container1
+            {
+                overflow: hidden;
+                max-width: 100vw;
+
+                background-image: linear-gradient(to right, $VeryLightRed, $LightRed);
+                border-radius:0 0 0 70px;
+
+                .pattern
+                {
+                    position: relative;
+                    z-index: 0;
+                    img 
+                    {
+                        z-index: 0 !important;
+                        width: 100%;
+                        position: absolute;
+                        z-index: 0;
+                
+                        top: -150vh;
+                        left: -30vw;
+                
+                        transform: rotate(0deg);
+                        overflow: hidden;
+                    }
+                }
+                header
+                {
+                    
+                    padding: 50px 60px;
+                    //padding: 30px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .nav-sec1
+                    {
+                        display: flex;
+                        justify-content: space-between; 
+                        z-index: 1000 !important;
+
+                        .p-dd-content
+                        {
+
+                            margin: 15px 15px;
+                            display: none;
+                            flex-direction: column;
+                            position: static;
+
+                            button
+                            {
+                                color: $white;
+                                border: none;
+                                background-color: transparent;
+
+                                &:hover 
+                                {
+                                    text-decoration: underline;
+                                    cursor: pointer;
+
+                                    .links 
+                                    {
+                                        opacity: 100% !important;
+                                    }
+                                }
+                            }
+
+                            .links
+                            {
+                                opacity: 0;
+                                background-color: white;
+                                box-shadow: 4px 4px 10px #1f1f1f;
+                                margin-top: 20px;
+                                padding: 15px;
+                                border-radius: 10px;
+                                transition: 0.4s ease-in-out;
+
+                                font-family: 'Ubuntu';
+                                font-weight: 400;
+
+                                li
+                                {
+                                    padding: 5px;
+                                    background-color: $white;
+                                    text-decoration: none;
+                                    color: rgb(14, 14, 14);
+                                    display: flex;
+                                    flex-direction: column;
+                                    font-family: 'Ubuntu';
+                                    font-weight: 400;
+                
+                
+                                    &:hover
+                                    {
+                                        font-weight: 420;
+                                        color: black;
+                                        cursor: pointer;
+                                        padding: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .nav-sec2
+                    {
+                        z-index: 1000 !important;
+                        display: none;
+                        a
+                        {
+                            text-decoration: none;
+                            color: $white;
+                            border: none;
+                        }
+
+                        #start
+                        {
+                            background-color: $white;
+                            color: $lightRed;
+
+                            &:hover
+                            {
+                                color: $white;
+                                background-color: $lightRed;   
+                            }
+                        }
+                    }
+                }
+
+                main 
+                {
+                    position: relative;
+                    text-align: center;
+                    margin-top: 25vh;
+                    color: $white;
+
+                    display: block;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px 20px;
+
+                    h1 
+                    {
+                        font-family: 'Ubuntu';
+                        font-size: 2rem;
+                        font-weight: 400;
+                        padding-bottom: 15px;
+                    }
+
+                    .main-butns
+                    {
+                        margin-top: 50px;
+                    
+                        a
+                        {
+                            z-index: 1000 !important;
+                            &:hover
+                            {
+                                color: $lightRed;
+                                background-color: $white;
+                            }
+                        }
+
+                        #start
+                        {
+                            &:hover
+                            {
+                                color: $white;
+                                background-color: $VeryLightRed;
+                                border: solid 1px $VeryLightRed;
+                            }
+                        }
+                    }
+
+                    
+                }
+            }
 
         .heading
         {
@@ -492,27 +671,254 @@ footer
             display:flex;
             justify-content: center;
             align-items: center;
-            margin: 0 auto;
+            margin-bottom: 20px;
+            max-height: 50vh;
+            max-width: 100vw;
+            padding: 20px 0;
 
-            img 
-            {
-                position: relative;
-                top: 5vh;
-                left: auto;
-                max-width: 180%;
-                margin: 0 auto;
-            }
+            background-image: url(../images/illustration-editor-mobile.svg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .container2
+        { 
+        max-width: 100vw;
+        overflow: hidden;
+        max-height: 60vh;
+        padding: 25px 15px;
+
+        display: block;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0px;
+
+        h2 
+        {
+            text-align: center;
+            padding: 15px 0;
+            font-size: 1.0em; 
+            line-height: 2rem;
+        }
+
+        p 
+        {
+            text-align: center;
+            color: $VeryDarkBlue;
+        }
         }
 
         .container4 
         {
-            max-height: 160vh;
+            max-height: 110vh;
+            margin-top: 10vh;
 
             section 
             {
                 display: grid;
                 grid-template-columns: 1fr;
                 grid-template-rows: 1fr 1fr;
+                background-image: url(../images/bg-pattern-circles.svg);
+                background-repeat: no-repeat;
+                background-size: 180%;
+                background-position: 55% 60%;
+
+                .container5 
+                {
+                    //background-color: #d84141;
+                    max-height: 80vh;
+                    overflow: visible;
+
+                    img 
+                    {
+                        position: relative;
+                        top: -15vh;
+                        overflow: visible;
+                        width: 100%;
+                        z-index: 1000000 !important;
+                    }
+                }
+        
+                .container6
+                {
+                    //background-color: #3f3d3d;
+                    height: 40vh;
+                    padding: 20px;
+                    padding-top: 0px;
+                    display: inline-block;
+                    justify-content: center;
+                    align-items: center;
+                    max-width: 100vw;
+
+                    position: relative;
+                    top: -10vh;
+
+                    h2 
+                    {
+                        text-align: center;
+                        color: $white;
+                        padding: 10px 0;
+
+                        font-family: 'Ubuntu', sans-serif;
+                        font-weight: 500;
+                        font-size: 1.8rem; 
+                    }
+
+                    p 
+                    {
+                        text-align: center;
+                        color: $white;
+                        padding: 10px;
+                        font-size: 1.2rem; 
+                        line-height: 2rem;
+                    }
+                }
+            }
+        }
+
+        .container7
+        {
+            max-width: 100vw;
+            max-height: 50vh;
+
+            position: relative;
+            left: auto;
+            background-image: url(../images/illustration-laptop-mobile.svg);
+            background-position: center;
+            background-size: 130%;
+            background-repeat: no-repeat;
+        }
+
+        .container8
+        { 
+            grid-area: cont8;
+            overflow: hidden;
+            max-width: 100vw;
+            max-height: 100vh;
+            padding: 0 50px;
+            padding-top: 0px;
+
+            h2 
+            {
+                text-align: center;
+                color: $VeryDarkBlue;
+                padding: 15px 0;
+
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: 500;
+                font-size: 1.7rem; 
+            }
+
+            p 
+            {
+                text-align: center;
+                color: $VeryDarkBlue;
+                font-size: 1.0rem; 
+                line-height: 2rem;
+            }
+        }
+
+        footer 
+        {
+            position: relative;
+            bottom: 0;
+            border-radius: 0 70px 0 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 80px 0;
+            text-align: center;
+            max-height: 100vh;
+            padding-bottom: 20px;
+            .logo
+            {
+                padding: 30px;
+                position: relative;
+                //top: 50px;
+            }
+
+            h6 
+            {
+                font-weight: 700;
+                margin: 15px 0;
+            }
+            
+            ul 
+            {
+                list-style-type: none;
+
+                li 
+                {
+                    font-weight: 500;
+                    margin: 10px 0; 
+                    color: $GrayishBlue;  
+                    cursor: pointer;
+
+                    &:hover 
+                    {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .attribution
+        {
+            grid-area: attr;
+            overflow: hidden;
+            max-width: 100vw;
+            max-height: 10vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .menu 
+        {
+            display: block !important;
+            position: absolute;
+            top: 9vh;
+            left: 80vw;
+            cursor: pointer;
+        }
+
+        .nav-mobile 
+        {
+            z-index: 100000 !important;
+            display: flex !important;
+            flex-direction: column;
+            
+            background-color: $white;
+            max-width: 100vw;
+            margin: 0 auto;
+            padding: 20px 120px;
+            border-radius: 10px;
+
+            position: absolute;
+            top: 20vh;
+            left: auto;
+            color: $VeryDarkBlue;
+
+            justify-content: center;
+            align-items: center;
+            ul 
+            {
+                list-style: none;
+                background-color: $GrayishBlue;
+            }
+
+            h6 
+            {
+                font-family: 'Ubuntu';
+                padding: 10px;
+                text-align: center;
+                font-weight: 500;;
+            }
+
+            li 
+            {
+                font-family: 'Ubuntu';
+                text-align: center;
+                padding: 10px 0;
             }
         }
     }

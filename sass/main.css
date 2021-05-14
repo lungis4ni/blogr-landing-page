@@ -42,6 +42,10 @@ a:hover {
   font-size: 2em;
 }
 
+.menu, .nav-mobile {
+  display: none;
+}
+
 .everything {
   display: -ms-grid;
   display: grid;
@@ -59,7 +63,6 @@ a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: cont1;
-  background-color: blue;
   max-width: 100vw;
   max-height: 100vh;
   overflow: hidden;
@@ -123,13 +126,10 @@ a:hover {
   overflow: hidden;
   max-height: 90vh;
   overflow: visible;
-}
-
-.everything .container3 img {
-  position: relative;
-  top: -15vh;
-  left: 5vw;
-  max-width: 130%;
+  background-image: url(../images/illustration-editor-desktop.svg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .everything .container4 {
@@ -205,8 +205,10 @@ a:hover {
   overflow: visible;
   max-width: 50vw;
   max-height: 100vh;
-  position: relative;
-  left: -20vw;
+  background-image: url(../images/illustration-laptop-mobile.svg);
+  background-position: center;
+  background-size: 140%;
+  background-repeat: no-repeat;
 }
 
 .everything .container8 {
@@ -483,9 +485,156 @@ footer ul li:hover {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     overflow-x: hidden;
-    -ms-grid-rows: 1fr 0.1fr 0.9fr 0.9fr 1.6fr 1fr 1fr 0.6fr 0.1fr;
-        grid-template-rows: 1fr 0.1fr 0.9fr 0.9fr 1.6fr 1fr 1fr 0.6fr 0.1fr;
+    -ms-grid-rows: 1fr 0.1fr 0.5fr 0.6fr 1.1fr 0.5fr 0.8fr 1fr 0.1fr;
+        grid-template-rows: 1fr 0.1fr 0.5fr 0.6fr 1.1fr 0.5fr 0.8fr 1fr 0.1fr;
         grid-template-areas: "cont1" "heading" "cont3" "cont2" "cont4" "cont7" "cont8" "footer" "attr";
+  }
+  .everything .container1 {
+    overflow: hidden;
+    max-width: 100vw;
+    background-image: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+    background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+    border-radius: 0 0 0 70px;
+  }
+  .everything .container1 .pattern {
+    position: relative;
+    z-index: 0;
+  }
+  .everything .container1 .pattern img {
+    z-index: 0 !important;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    top: -150vh;
+    left: -30vw;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    overflow: hidden;
+  }
+  .everything .container1 header {
+    padding: 50px 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .everything .container1 header .nav-sec1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    z-index: 1000 !important;
+  }
+  .everything .container1 header .nav-sec1 .p-dd-content {
+    margin: 15px 15px;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: static;
+  }
+  .everything .container1 header .nav-sec1 .p-dd-content button {
+    color: white;
+    border: none;
+    background-color: transparent;
+  }
+  .everything .container1 header .nav-sec1 .p-dd-content button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .everything .container1 header .nav-sec1 .p-dd-content button:hover .links {
+    opacity: 100% !important;
+  }
+  .everything .container1 header .nav-sec1 .p-dd-content .links {
+    opacity: 0;
+    background-color: white;
+    -webkit-box-shadow: 4px 4px 10px #1f1f1f;
+            box-shadow: 4px 4px 10px #1f1f1f;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    font-family: 'Ubuntu';
+    font-weight: 400;
+  }
+  .everything .container1 header .nav-sec1 .p-dd-content .links li {
+    padding: 5px;
+    background-color: white;
+    text-decoration: none;
+    color: #0e0e0e;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-family: 'Ubuntu';
+    font-weight: 400;
+  }
+  .everything .container1 header .nav-sec1 .p-dd-content .links li:hover {
+    font-weight: 420;
+    color: black;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .everything .container1 header .nav-sec2 {
+    z-index: 1000 !important;
+    display: none;
+  }
+  .everything .container1 header .nav-sec2 a {
+    text-decoration: none;
+    color: white;
+    border: none;
+  }
+  .everything .container1 header .nav-sec2 #start {
+    background-color: white;
+    color: #ff525d;
+  }
+  .everything .container1 header .nav-sec2 #start:hover {
+    color: white;
+    background-color: #ff525d;
+  }
+  .everything .container1 main {
+    position: relative;
+    text-align: center;
+    margin-top: 25vh;
+    color: white;
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 20px;
+  }
+  .everything .container1 main h1 {
+    font-family: 'Ubuntu';
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 15px;
+  }
+  .everything .container1 main .main-butns {
+    margin-top: 50px;
+  }
+  .everything .container1 main .main-butns a {
+    z-index: 1000 !important;
+  }
+  .everything .container1 main .main-butns a:hover {
+    color: #ff525d;
+    background-color: white;
+  }
+  .everything .container1 main .main-butns #start:hover {
+    color: white;
+    background-color: #ff8f70;
+    border: solid 1px #ff8f70;
   }
   .everything .heading {
     max-height: 5vh;
@@ -508,17 +657,41 @@ footer ul li:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0 auto;
+    margin-bottom: 20px;
+    max-height: 50vh;
+    max-width: 100vw;
+    padding: 20px 0;
+    background-image: url(../images/illustration-editor-mobile.svg);
+    background-position: center;
+    background-size: cover;
   }
-  .everything .container3 img {
-    position: relative;
-    top: 5vh;
-    left: auto;
-    max-width: 180%;
-    margin: 0 auto;
+  .everything .container2 {
+    max-width: 100vw;
+    overflow: hidden;
+    max-height: 60vh;
+    padding: 25px 15px;
+    display: block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 0px;
+  }
+  .everything .container2 h2 {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.0em;
+    line-height: 2rem;
+  }
+  .everything .container2 p {
+    text-align: center;
+    color: #1f3f5b;
   }
   .everything .container4 {
-    max-height: 160vh;
+    max-height: 110vh;
+    margin-top: 10vh;
   }
   .everything .container4 section {
     display: -ms-grid;
@@ -527,6 +700,181 @@ footer ul li:hover {
         grid-template-columns: 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    background-image: url(../images/bg-pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-size: 180%;
+    background-position: 55% 60%;
+  }
+  .everything .container4 section .container5 {
+    max-height: 80vh;
+    overflow: visible;
+  }
+  .everything .container4 section .container5 img {
+    position: relative;
+    top: -15vh;
+    overflow: visible;
+    width: 100%;
+    z-index: 1000000 !important;
+  }
+  .everything .container4 section .container6 {
+    height: 40vh;
+    padding: 20px;
+    padding-top: 0px;
+    display: inline-block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100vw;
+    position: relative;
+    top: -10vh;
+  }
+  .everything .container4 section .container6 h2 {
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+  }
+  .everything .container4 section .container6 p {
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  .everything .container7 {
+    max-width: 100vw;
+    max-height: 50vh;
+    position: relative;
+    left: auto;
+    background-image: url(../images/illustration-laptop-mobile.svg);
+    background-position: center;
+    background-size: 130%;
+    background-repeat: no-repeat;
+  }
+  .everything .container8 {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    grid-area: cont8;
+    overflow: hidden;
+    max-width: 100vw;
+    max-height: 100vh;
+    padding: 0 50px;
+    padding-top: 0px;
+  }
+  .everything .container8 h2 {
+    text-align: center;
+    color: #1f3f5b;
+    padding: 15px 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 1.7rem;
+  }
+  .everything .container8 p {
+    text-align: center;
+    color: #1f3f5b;
+    font-size: 1.0rem;
+    line-height: 2rem;
+  }
+  .everything footer {
+    position: relative;
+    bottom: 0;
+    border-radius: 0 70px 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 80px 0;
+    text-align: center;
+    max-height: 100vh;
+    padding-bottom: 20px;
+  }
+  .everything footer .logo {
+    padding: 30px;
+    position: relative;
+  }
+  .everything footer h6 {
+    font-weight: 700;
+    margin: 15px 0;
+  }
+  .everything footer ul {
+    list-style-type: none;
+  }
+  .everything footer ul li {
+    font-weight: 500;
+    margin: 10px 0;
+    color: #c8c8cb;
+    cursor: pointer;
+  }
+  .everything footer ul li:hover {
+    text-decoration: underline;
+  }
+  .everything .attribution {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+    grid-area: attr;
+    overflow: hidden;
+    max-width: 100vw;
+    max-height: 10vh;
+    padding: 20px;
+    text-align: center;
+  }
+  .everything .menu {
+    display: block !important;
+    position: absolute;
+    top: 9vh;
+    left: 80vw;
+    cursor: pointer;
+  }
+  .everything .nav-mobile {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 100000 !important;
+    background-color: white;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 20px 120px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20vh;
+    left: auto;
+    color: #1f3f5b;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .everything .nav-mobile ul {
+    list-style: none;
+    background-color: #c8c8cb;
+  }
+  .everything .nav-mobile h6 {
+    font-family: 'Ubuntu';
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+  }
+  .everything .nav-mobile li {
+    font-family: 'Ubuntu';
+    text-align: center;
+    padding: 10px 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
